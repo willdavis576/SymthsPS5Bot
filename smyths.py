@@ -1,6 +1,6 @@
 import time
 from selenium import webdriver
-
+import sys
 import smtplib
 
 from string import Template
@@ -11,6 +11,7 @@ from email.mime.text import MIMEText
 MY_ADDRESS = ''
 PASSWORD = ''
 
+sys.setrecursionlimit(10**6) 
 
 def alert():
     s = smtplib.SMTP(host='smtp-mail.outlook.com', port=587)
